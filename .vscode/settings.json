@@ -1,0 +1,13 @@
+{
+  "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "css.validate": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "editor.quickSuggestions": {
+    "strings": "on"
+  }
+}
