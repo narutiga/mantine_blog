@@ -1,5 +1,5 @@
 import "src/styles/globals.css";
-import type { AppProps } from "next/app";
+import type { AppProps, CustomAppPage } from "next/app";
 import {
   ColorScheme,
   ColorSchemeProvider,
@@ -7,11 +7,18 @@ import {
 } from "@mantine/core";
 import { useState } from "react";
 
-function MyApp({ Component, pageProps }: AppProps) {
+const App: CustomAppPage = ({ Component, pageProps }) => {
+  const getLayout =
+    Component.getLayout ||
+    ((page) => {
+      return page;
+    });
+
   const [colorScheme, setColoeScheme] = useState<ColorScheme>("dark");
   const toggleColorScheme = (value?: ColorScheme) => {
     setColoeScheme(value || (colorScheme === "dark" ? "light" : "dark"));
   };
+
   return (
     <ColorSchemeProvider
       colorScheme={colorScheme}
@@ -20,12 +27,12 @@ function MyApp({ Component, pageProps }: AppProps) {
       <MantineProvider
         withGlobalStyles
         withNormalizeCSS
-        theme={{ colorScheme: "light" }}
+        theme={{ colorScheme }}
       >
-        <Component {...pageProps} />
+        {getLayout(<Component {...pageProps} />)}
       </MantineProvider>
     </ColorSchemeProvider>
   );
-}
+};
 
-export default MyApp;
+export default App;
