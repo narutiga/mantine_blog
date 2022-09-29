@@ -254,6 +254,13 @@
   dependencies:
     "@mantine/utils" "5.4.1"
 
+"@mantine/ds@^5.4.1":
+  version "5.4.1"
+  resolved "https://registry.yarnpkg.com/@mantine/ds/-/ds-5.4.1.tgz#2041fbf527d2089df760d6a263a1fad08a6392cc"
+  integrity sha512-SXqdNQ35dIjrkhqSKiWRFEtIEVvgN3Y8LSe8lgdF14aZ1g2RDgRKRJgCfDvxZxrFQEJovr1BLxxMruDD50vNTA==
+  dependencies:
+    "@mantine/utils" "5.4.1"
+
 "@mantine/form@^5.4.1":
   version "5.4.1"
   resolved "https://registry.yarnpkg.com/@mantine/form/-/form-5.4.1.tgz#f6016215e89a6684dccfe9e943af2ee2bc812256"
