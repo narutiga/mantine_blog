@@ -1,4 +1,4 @@
-import "src/styles/globals.css";
+import "src/style/globals.css";
 import type { CustomAppPage } from "next/app";
 import {
   ColorScheme,

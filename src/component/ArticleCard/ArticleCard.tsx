@@ -6,7 +6,10 @@ import {
   Text,
   Container,
   AspectRatio,
+  Group,
+  Badge,
 } from "@mantine/core";
+import dayjs from "dayjs";
 import Link from "next/link";
 
 const useStyles = createStyles((theme) => ({
@@ -18,15 +21,16 @@ const useStyles = createStyles((theme) => ({
       boxShadow: theme.shadows.md,
     },
   },
-
-  title: {
-    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-    fontWeight: 600,
-  },
 }));
 
 type Props = {
-  articleCards: { id: string; title: string; image: string; date: string }[];
+  articleCards: {
+    id: string;
+    title: string;
+    image: string;
+    date: string;
+    category: string;
+  }[];
 };
 
 /** @package */
@@ -39,18 +43,21 @@ export const ArticleCard = (props: Props) => {
         <AspectRatio ratio={1920 / 1080}>
           <Image src={card.image} />
         </AspectRatio>
-        <Text className={classes.title} mt={5}>
-          {card.title}
-        </Text>
-        <Text
-          color="dimmed"
-          size="xs"
-          transform="uppercase"
-          weight={700}
-          mt="md"
-        >
-          {card.date}
-        </Text>
+        <Group position="apart">
+          <Text
+            color="dimmed"
+            size="sm"
+            weight={700}
+            mt="md"
+            className="my-auto"
+          >
+            <time dateTime={card.date}>
+              {dayjs(card.date).format("YYYY年MM月DD日")}
+            </time>
+          </Text>
+          <Badge color="red">{card.category}</Badge>
+        </Group>
+        <Text className="mt-3 text-lg font-semibold">{card.title}</Text>
       </Card>
     </Link>
   ));

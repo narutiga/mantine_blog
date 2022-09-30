@@ -7,7 +7,7 @@ export const Layout: CustomLayout = (page) => {
   return (
     <div className="items-center justify-center font-mono">
       <Header />
-      <main className="items-center">{page}</main>
+      <main className="pt-20 items-center">{page}</main>
       <Footer />
     </div>
   );

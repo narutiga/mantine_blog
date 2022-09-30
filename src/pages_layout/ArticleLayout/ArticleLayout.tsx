@@ -5,9 +5,9 @@ import { Header } from "src/component/Header";
 /** @package */
 export const ArticleLayout: CustomLayout = (page) => {
   return (
-    <div className="items-center justify-center font-mono">
+    <div className="font-mono">
       <Header />
-      <main className="">{page}</main>
+      <main className="w-5/6 mx-auto">{page}</main>
       <Footer />
     </div>
   );
