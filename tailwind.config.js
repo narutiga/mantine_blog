@@ -3,6 +3,8 @@ module.exports = {
   mode: "jit",
   content: [
     "src/pages/**/*.{js,ts,jsx,tsx}",
+    "src/pages_component/**/*.{js,ts,jsx,tsx}",
+    "src/pages_layout/**/*.{js,ts,jsx,tsx}",
     "src/component/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
@@ -15,5 +17,5 @@ module.exports = {
       xl: "1400px",
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
