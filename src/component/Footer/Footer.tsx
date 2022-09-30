@@ -32,6 +32,7 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
+/** @package */
 export const Footer = () => {
   const { classes } = useStyles();
 
