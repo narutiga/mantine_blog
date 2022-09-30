@@ -1,19 +1,15 @@
-import { MicroCMSContentId, MicroCMSDate } from "microcms-js-sdk";
-import { GetStaticPaths, GetStaticProps, NextPage, PreviewData } from "next";
+import { CustomNextPage, GetStaticPaths, GetStaticProps } from "next";
 import { client } from "src/lib/client";
-import { Blog } from "src/pages";
+import { ArticleLayout } from "src/pages_layout/ArticleLayout";
+import { Blog } from "src/pages_component/index";
+import { Article } from "src/pages_component/article";
+import { ArticleProps } from "src/pages_component/article/page";
 
-type Props = Blog & MicroCMSContentId & MicroCMSDate;
-
-const BlogId: NextPage<Props> = (props) => {
-  return (
-    <div>
-      <h1>{props.title}</h1>
-      <time>{props.publishedAt}</time>
-      <div dangerouslySetInnerHTML={{ __html: props.content }} />
-    </div>
-  );
+const ArticlePage: CustomNextPage<ArticleProps> = (props) => {
+  return <Article {...props} />;
 };
+
+ArticlePage.getLayout = ArticleLayout;
 
 export const getStaticPaths: GetStaticPaths<{ id: string }> = async () => {
   const data = await client.getList({ endpoint: "blogs" });
@@ -34,10 +30,9 @@ export const getStaticProps: GetStaticProps<{}, { id: string }> = async (
     endpoint: "blogs",
     contentId: ctx.params.id,
   });
-  console.log(data);
   return {
     props: data,
   };
 };
 
-export default BlogId;
+export default ArticlePage;

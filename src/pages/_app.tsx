@@ -1,5 +1,5 @@
 import "src/styles/globals.css";
-import type { AppProps, CustomAppPage } from "next/app";
+import type { CustomAppPage } from "next/app";
 import {
   ColorScheme,
   ColorSchemeProvider,
