@@ -38,7 +38,7 @@ export const Index: NextPage<Props> = (props) => {
       <Head>
         <title>Mantine blog</title>
       </Head>
-      <p className="">{`記事の総数：${props.totalCount}件`}</p>
+      <p className="pr-10 text-right">{`記事の総数：${props.totalCount}件`}</p>
       <ArticleCard articleCards={articleCards} />
     </>
   );

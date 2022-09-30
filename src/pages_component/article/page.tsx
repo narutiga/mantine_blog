@@ -15,10 +15,7 @@ export const Article: NextPage<ArticleProps> = (props) => {
           {dayjs(props.publishedAt).format("YYYY年MM月DD日")}
         </time>
       </div>
-      <div
-        className="prose"
-        dangerouslySetInnerHTML={{ __html: props.content }}
-      />
+      <div dangerouslySetInnerHTML={{ __html: props.content }} />
     </>
   );
 };
