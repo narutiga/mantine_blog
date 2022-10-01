@@ -1,5 +1,4 @@
 import type { NextPage } from "next";
-import Head from "next/head";
 import { MicroCMSListResponse } from "microcms-js-sdk";
 import { ArticleCard } from "src/component/ArticleCard";
 
@@ -35,9 +34,6 @@ export const Index: NextPage<Props> = (props) => {
 
   return (
     <>
-      <Head>
-        <title>Mantine blog</title>
-      </Head>
       <p>初学者による初学者のためのMantineブログ</p>
       <p className="w-full pr-10 text-sm text-right">{`記事の総数：${props.totalCount}件`}</p>
       <ArticleCard articleCards={articleCards} />

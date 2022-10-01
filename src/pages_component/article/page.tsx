@@ -1,4 +1,5 @@
 import { NextPage } from "next";
+import Link from "next/link";
 import { MicroCMSContentId, MicroCMSDate } from "microcms-js-sdk";
 import { Blog } from "src/pages_component/index";
 import dayjs from "dayjs";
@@ -20,9 +21,14 @@ export const Article: NextPage<ArticleProps> = (props) => {
       </time>
       <p className="text-xs">{`カテゴリ: ${props.category.name}`}</p>
       <div
-        className="mt-4"
+        className="my-6"
         dangerouslySetInnerHTML={{ __html: props.content }}
       />
+      <Link href="/">
+        <a href="replace" className="text-red-400 text-right text-sm">
+          記事一覧へ
+        </a>
+      </Link>
     </>
   );
 };
