@@ -64,7 +64,7 @@ export const ArticleCard: FC<Props> = (props) => {
   ));
 
   return (
-    <Container py="xl">
+    <Container py="xl" className="w-full">
       <SimpleGrid
         cols={3}
         breakpoints={[

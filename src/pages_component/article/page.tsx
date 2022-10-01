@@ -9,16 +9,20 @@ export type ArticleProps = Blog & MicroCMSContentId & MicroCMSDate;
 export const Article: NextPage<ArticleProps> = (props) => {
   return (
     <>
-      <h1 className="text-center text-xl mb-4">{props.title}</h1>
-      <time dateTime={props.publishedAt} className="text-right">
-        {dayjs(props.publishedAt).format("投稿日：YYYY年MM月DD日")}
+      <h1 className="text-xl mb-4">{props.title}</h1>
+      <time dateTime={props.publishedAt} className="text-xs">
+        {dayjs(props.publishedAt).format("投稿日: YYYY年MM月DD日")}
       </time>
-      <time dateTime={props.revisedAd} className="text-right">
+      <time dateTime={props.revisedAd} className="text-xs">
         {props.revisedAd
-          ? dayjs(props.revisedAd).format("更新日：YYYY年MM月DD日")
+          ? dayjs(props.revisedAd).format("更新日: YYYY年MM月DD日")
           : null}
       </time>
-      <div dangerouslySetInnerHTML={{ __html: props.content }} />
+      <p className="text-xs">{`カテゴリ: ${props.category.name}`}</p>
+      <div
+        className="mt-4"
+        dangerouslySetInnerHTML={{ __html: props.content }}
+      />
     </>
   );
 };
