@@ -26,7 +26,7 @@ export const Article: NextPage<ArticleProps> = (props) => {
       />
       <Link href="/">
         <a href="replace" className="text-red-400 text-right text-sm">
-          記事一覧へ
+          記事一覧
         </a>
       </Link>
     </>
