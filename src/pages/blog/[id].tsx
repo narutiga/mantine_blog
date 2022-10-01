@@ -1,8 +1,8 @@
 import { CustomNextPage, GetStaticPaths, GetStaticProps } from "next";
 import { client } from "src/lib/client";
 import { ArticleLayout } from "src/pages_layout";
-import { Blog } from "src/pages_component/index";
 import { Article } from "src/pages_component/article";
+import { Blog } from "src/pages_component/index";
 import { ArticleProps } from "src/pages_component/article/page";
 
 const ArticlePage: CustomNextPage<ArticleProps> = (props) => {

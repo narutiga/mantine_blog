@@ -1,8 +1,9 @@
+import { FC } from "react";
 import { useMantineColorScheme, ActionIcon, Group } from "@mantine/core";
 import { IconSun, IconMoonStars } from "@tabler/icons";
 
 /** @package */
-export const ColorSchemeToggle = () => {
+export const ColorSchemeToggle: FC = () => {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
 
   return (

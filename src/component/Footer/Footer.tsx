@@ -1,9 +1,15 @@
 import { createStyles, Container, Group, ActionIcon } from "@mantine/core";
-import { IconBrandTwitter, IconBrandInstagram } from "@tabler/icons";
+import {
+  IconBrandTwitter,
+  IconBrandInstagram,
+  IconBrandGithub,
+} from "@tabler/icons";
+import { FC } from "react";
 
 const useStyles = createStyles((theme) => ({
   footer: {
     marginTop: 120,
+    width: "100%",
     backgroundColor:
       theme.colorScheme === "dark"
         ? theme.colors.dark[6]
@@ -33,7 +39,7 @@ const useStyles = createStyles((theme) => ({
 }));
 
 /** @package */
-export const Footer = () => {
+export const Footer: FC = () => {
   const { classes } = useStyles();
 
   return (
@@ -41,10 +47,25 @@ export const Footer = () => {
       <Container className={classes.inner}>
         <p>&copy;2022 kino's blog</p>
         <Group spacing={0} className={classes.links} position="right" noWrap>
-          <ActionIcon size="lg">
+          <ActionIcon
+            size="xl"
+            component="a"
+            href="https://github.com/narutiga"
+          >
+            <IconBrandGithub size={18} stroke={1.5} />
+          </ActionIcon>
+          <ActionIcon
+            size="xl"
+            component="a"
+            href="https://twitter.com/@kin0kin0kino"
+          >
             <IconBrandTwitter size={18} stroke={1.5} />
           </ActionIcon>
-          <ActionIcon size="lg">
+          <ActionIcon
+            size="xl"
+            component="a"
+            href="https://www.instagram.com/kino_32"
+          >
             <IconBrandInstagram size={18} stroke={1.5} />
           </ActionIcon>
         </Group>

@@ -1,6 +1,6 @@
 import { CustomLayout } from "next";
-import { Footer } from "src/component/Footer";
 import { HeaderMenu } from "src/component/Header";
+import { Footer } from "src/component/Footer";
 
 /** @package */
 export const ArticleLayout: CustomLayout = (page) => {
