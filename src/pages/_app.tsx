@@ -6,6 +6,7 @@ import {
   MantineProvider,
 } from "@mantine/core";
 import { useState } from "react";
+import Head from "next/head";
 
 const App: CustomAppPage = ({ Component, pageProps }) => {
   const getLayout =
@@ -29,6 +30,13 @@ const App: CustomAppPage = ({ Component, pageProps }) => {
         withNormalizeCSS
         theme={{ colorScheme }}
       >
+        <Head>
+          <title>はじめてのMantine</title>
+          <meta
+            name="description"
+            content="初学者による初学者のためのMantineブログです。"
+          />
+        </Head>
         {getLayout(<Component {...pageProps} />)}
       </MantineProvider>
     </ColorSchemeProvider>

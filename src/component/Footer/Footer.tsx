@@ -1,9 +1,5 @@
 import { createStyles, Container, Group, ActionIcon } from "@mantine/core";
-import {
-  IconBrandTwitter,
-  IconBrandInstagram,
-  IconBrandGithub,
-} from "@tabler/icons";
+import { IconBrandTwitter, IconBrandGithub } from "@tabler/icons";
 import { FC } from "react";
 
 const useStyles = createStyles((theme) => ({
@@ -60,13 +56,6 @@ export const Footer: FC = () => {
             href="https://twitter.com/@kin0kin0kino"
           >
             <IconBrandTwitter size={18} stroke={1.5} />
-          </ActionIcon>
-          <ActionIcon
-            size="xl"
-            component="a"
-            href="https://www.instagram.com/kino_32"
-          >
-            <IconBrandInstagram size={18} stroke={1.5} />
           </ActionIcon>
         </Group>
       </Container>
