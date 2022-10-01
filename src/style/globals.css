@@ -6,3 +6,12 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+a {
+  color: #f87171;
+  /* text-decoration: none; */
+}
+/* 
+a:hover {
+  color: #fca5a5;
+} */
