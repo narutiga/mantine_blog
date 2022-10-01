@@ -1,3 +1,5 @@
+import { FC } from "react";
+import Link from "next/link";
 import {
   createStyles,
   SimpleGrid,
@@ -10,7 +12,6 @@ import {
   Badge,
 } from "@mantine/core";
 import dayjs from "dayjs";
-import Link from "next/link";
 
 const useStyles = createStyles((theme) => ({
   card: {
@@ -34,7 +35,7 @@ type Props = {
 };
 
 /** @package */
-export const ArticleCard = (props: Props) => {
+export const ArticleCard: FC<Props> = (props) => {
   const { classes } = useStyles();
 
   const cards = props.articleCards.map((card: any) => (
