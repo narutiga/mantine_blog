@@ -43,7 +43,7 @@ const features = [
   },
   {
     icon: IconSeeding,
-    title: "Programing",
+    title: "Programming",
     description:
       "2022年1月にPCを買って、独学でプログラミングを学び始めました。6月からは、IT_KINGDUMでReact、TypeScriptを中心にフロントエンドについて学習しています。",
   },
