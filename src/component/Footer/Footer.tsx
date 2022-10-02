@@ -1,6 +1,7 @@
+import { FC } from "react";
+import Link from "next/link";
 import { createStyles, Container, Group, ActionIcon } from "@mantine/core";
 import { IconBrandTwitter, IconBrandGithub } from "@tabler/icons";
-import { FC } from "react";
 
 const useStyles = createStyles((theme) => ({
   footer: {
@@ -32,6 +33,10 @@ const useStyles = createStyles((theme) => ({
       marginTop: theme.spacing.md,
     },
   },
+
+  a: {
+    color: theme.colorScheme === "dark" ? "#DEE2E6" : "#343A40",
+  },
 }));
 
 /** @package */
@@ -41,6 +46,11 @@ export const Footer: FC = () => {
   return (
     <div className={classes.footer}>
       <Container className={classes.inner}>
+        <Link href="/plofile">
+          <a href="replace" className={classes.a}>
+            Profile
+          </a>
+        </Link>
         <p>&copy;2022 kino's blog</p>
         <Group spacing={0} className={classes.links} position="right" noWrap>
           <ActionIcon

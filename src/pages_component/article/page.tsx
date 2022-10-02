@@ -25,7 +25,7 @@ export const Article: NextPage<ArticleProps> = (props) => {
         dangerouslySetInnerHTML={{ __html: props.content }}
       />
       <Link href="/">
-        <a href="replace" className="text-red-400 text-right text-sm">
+        <a href="replace" className="text-right">
           記事一覧
         </a>
       </Link>
