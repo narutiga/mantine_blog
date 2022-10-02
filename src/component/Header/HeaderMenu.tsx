@@ -16,14 +16,9 @@ const useStyles = createStyles((theme) => ({
         ? theme.colors.dark[6]
         : theme.colors.gray[0],
   },
-
-  links: {
-    [theme.fn.smallerThan("xs")]: {
-      display: "none",
-    },
-  },
 }));
 
+/** @package */
 export const HeaderMenu: FC = () => {
   const { classes } = useStyles();
   return (

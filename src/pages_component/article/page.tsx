@@ -19,7 +19,7 @@ export const Article: NextPage<ArticleProps> = (props) => {
           ? dayjs(props.revisedAd).format("更新日: YYYY年MM月DD日")
           : null}
       </time>
-      <p className="text-xs">{`カテゴリ: ${props.category.name}`}</p>
+      <p className="my-0 text-xs">{`カテゴリ: ${props.category.name}`}</p>
       <div
         className="my-6"
         dangerouslySetInnerHTML={{ __html: props.content }}

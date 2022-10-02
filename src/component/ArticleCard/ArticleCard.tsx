@@ -24,21 +24,23 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
+type ArticleCard = {
+  id: string;
+  title: string;
+  image: string;
+  date: string;
+  category: string;
+};
+
 type Props = {
-  articleCards: {
-    id: string;
-    title: string;
-    image: string;
-    date: string;
-    category: string;
-  }[];
+  articleCards: ArticleCard[];
 };
 
 /** @package */
 export const ArticleCard: FC<Props> = (props) => {
   const { classes } = useStyles();
 
-  const cards = props.articleCards.map((card: any) => (
+  const cards = props.articleCards.map((card) => (
     <Link href={`/blog/${card.id}`} key={card.title}>
       <Card p="md" radius="md" component="a" href="#" className={classes.card}>
         <AspectRatio ratio={1920 / 1080}>
