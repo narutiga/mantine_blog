@@ -46,7 +46,7 @@ export const Footer: FC = () => {
   return (
     <div className={classes.footer}>
       <Container className={classes.inner}>
-        <Link href="/plofile">
+        <Link href="/profile">
           <a href="replace" className={classes.a}>
             Profile
           </a>
