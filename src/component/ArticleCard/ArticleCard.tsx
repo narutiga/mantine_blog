@@ -11,6 +11,7 @@ import {
   Group,
   Badge,
 } from "@mantine/core";
+import { Blog } from "src/pages_component/index";
 import dayjs from "dayjs";
 
 const useStyles = createStyles((theme) => ({
@@ -24,27 +25,19 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-type ArticleCard = {
-  id: string;
-  title: string;
-  image: string;
-  date: string;
-  category: string;
-};
-
 type Props = {
-  articleCards: ArticleCard[];
+  articles: Blog[];
 };
 
 /** @package */
 export const ArticleCard: FC<Props> = (props) => {
   const { classes } = useStyles();
 
-  const cards = props.articleCards.map((card) => (
-    <Link href={`/blog/${card.id}`} key={card.title}>
+  const cards = props.articles.map((article) => (
+    <Link href={`/blog/${article.id}`} key={article.title}>
       <Card p="md" radius="md" component="a" href="#" className={classes.card}>
         <AspectRatio ratio={1920 / 1080}>
-          <Image src={card.image} />
+          <Image src={article.eyecatch.url} />
         </AspectRatio>
         <Group position="apart">
           <Text
@@ -54,13 +47,13 @@ export const ArticleCard: FC<Props> = (props) => {
             mt="md"
             className="my-auto"
           >
-            <time dateTime={card.date}>
-              {dayjs(card.date).format("YYYY年MM月DD日")}
+            <time dateTime={article.publishedAt}>
+              {dayjs(article.publishedAt).format("YYYY年MM月DD日")}
             </time>
           </Text>
-          <Badge color="red">{card.category}</Badge>
+          <Badge color="red">{article.category.name}</Badge>
         </Group>
-        <Text className="mt-3 text-lg font-semibold">{card.title}</Text>
+        <Text className="mt-3 text-lg font-semibold">{article.title}</Text>
       </Card>
     </Link>
   ));
