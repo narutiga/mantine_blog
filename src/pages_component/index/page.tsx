@@ -24,19 +24,11 @@ export type Blog = {
 export type Props = MicroCMSListResponse<Blog>;
 
 export const Index: NextPage<Props> = (props) => {
-  const articleCards = props.contents.map((item) => ({
-    id: item.id,
-    title: item.title,
-    image: item.eyecatch.url,
-    date: item.publishedAt,
-    category: item.category.name,
-  }));
-
   return (
     <>
       <p>初学者による初学者のためのMantineブログ</p>
       <p className="w-full pr-10 text-sm text-right">{`記事の総数：${props.totalCount}件`}</p>
-      <ArticleCard articleCards={articleCards} />
+      <ArticleCard articles={props.contents} />
     </>
   );
 };
