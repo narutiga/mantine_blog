@@ -31,19 +31,19 @@ const App: CustomAppPage = ({ Component, pageProps }) => {
         theme={{ fontFamily: "monospace", colorScheme }}
       >
         <Head>
-          <title>はじめてのMantine</title>
+          <title>めざせ、フロントエンジニア</title>
           <meta
             name="description"
-            content="初学者による初学者のためのMantineブログです。"
+            content="未経験アラフォーがエンジニアを目指すブログです"
           />
           <link
             rel="icon"
-            href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:90px;%22>🔰</text></svg>"
+            href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:90px;%22>🐾</text></svg>"
           ></link>
           <link
             rel="icon alternate"
             type="image/png"
-            href="https://twemoji.maxcdn.com/v/14.0.2/72x72/1f530.png"
+            href="https://twemoji.maxcdn.com/v/14.0.2/72x72/1f43e.png"
           />
         </Head>
         {getLayout(<Component {...pageProps} />)}
