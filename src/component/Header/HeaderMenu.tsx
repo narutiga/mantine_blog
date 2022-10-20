@@ -33,7 +33,7 @@ export const HeaderMenu: FC = () => {
               className="my-auto"
             />
             <h1 className="ml-2 my-auto font-semibold text-2xl">
-              はじめてのMantine
+              めざせ、フロントエンジニア
             </h1>
           </div>
         </Link>
