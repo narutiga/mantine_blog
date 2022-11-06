@@ -1,8 +1,8 @@
 import { FC } from "react";
 import Link from "next/link";
 import { createStyles, Header, Container } from "@mantine/core";
-import { MantineLogo } from "@mantine/ds";
 import { ColorSchemeToggle } from "src/component/ColorSchemeToggle";
+import Image from "next/image";
 
 const useStyles = createStyles((theme) => ({
   header: {
@@ -26,14 +26,9 @@ export const HeaderMenu: FC = () => {
       <Container size={3000} px={20} className={classes.header}>
         <Link href="/">
           <div className="flex hover:cursor-pointer">
-            {/* <MantineLogo
-              type="mark"
-              color="red"
-              size={40}
-              className="my-auto"
-            /> */}
-            <h1 className="ml-2 my-auto font-semibold text-xl md:text-2xl">
-              学習ログ　🐾
+            <Image src="/icon.png" width={40} height={40} alt="logo" />
+            <h1 className="ml-4 my-auto font-semibold text-xl md:text-2xl">
+              学習ログ
             </h1>
           </div>
         </Link>
