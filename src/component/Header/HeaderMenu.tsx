@@ -26,14 +26,14 @@ export const HeaderMenu: FC = () => {
       <Container size={3000} px={20} className={classes.header}>
         <Link href="/">
           <div className="flex hover:cursor-pointer">
-            <MantineLogo
+            {/* <MantineLogo
               type="mark"
               color="red"
               size={40}
               className="my-auto"
-            />
+            /> */}
             <h1 className="ml-2 my-auto font-semibold text-xl md:text-2xl">
-              学習ログ
+              学習ログ　🐾
             </h1>
           </div>
         </Link>

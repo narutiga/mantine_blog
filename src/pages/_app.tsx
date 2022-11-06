@@ -31,7 +31,7 @@ const App: CustomAppPage = ({ Component, pageProps }) => {
         theme={{ fontFamily: "monospace", colorScheme }}
       >
         <Head>
-          <title>めざせ、フロントエンジニア</title>
+          <title>学習ログ</title>
           <meta
             name="description"
             content="未経験アラフォーがエンジニアを目指すブログです"
