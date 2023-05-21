@@ -1,6 +1,6 @@
 # 概要
 
-- 初学者による初学者のための Mantine ブログです
+初学者による初学者のための Mantine ブログです
 
 https://mantine-blog.vercel.app/
 
